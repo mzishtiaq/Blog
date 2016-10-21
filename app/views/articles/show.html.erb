@@ -2,25 +2,10 @@
 <p><%= markdown(@article.body) %></p>
 
 <h2>Comments</h2>
-<% @article.comments.each do |comment| %>
-  <h3><%= comment.user_name %></h3>
-  <p><%= comment.body %></p>
-<% end %>
+  <%= render partial: "comments/comments" %>
 
 <h2>Leave a comment</h2>
-<%= form_for([@article, @article.comments.build]) do |form| %>
-  <p>
-    <%= form.label :user_name %><br>
-    <%= form.text_field :user_name %>
-  </p>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit "Submit" %>
-  </p>
-<% end %>
+  <%= render partial: "comments/form" %>
 
 <%= link_to 'Edit article', edit_article_path(@article) %>
 <%= link_to 'Delete article', article_path(@article), method: :delete %>
