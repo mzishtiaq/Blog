@@ -1,4 +1,11 @@
 <%= form_for @article do |form| %>
+  <% if @article.errors.any? %>
+      <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+  <% end %>
   <p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
