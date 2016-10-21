@@ -57,7 +57,7 @@ private
   end
 
   def find_article
-    @article = Article.find(params[:id])
+    @article = Article.friendly.find(params[:id])
   end
 
 end
