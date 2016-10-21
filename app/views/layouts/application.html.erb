@@ -8,6 +8,12 @@
 </head>
 <body>
 <h1>Blog</h1>
+<% if notice.present? %>
+    <%= notice %>
+<% end %>
+<% if alert.present? %>
+    <%= alert %>
+<% end %>
 
 <%= yield %>
 
