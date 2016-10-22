@@ -20,6 +20,9 @@ A simple blog that has articles, commenting and email subscription for notificat
 + Rspec 3.5.3
 + Capybara
 + Postgresql
++ Bootstrap-sass
++ Friendly-Id (For SEO-friendly URLs)
++ Redcarpet (For rendering Markdown)
 
 Installation
 ------------
