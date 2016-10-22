@@ -88,5 +88,7 @@ Rails.application.configure do
     password: ENV["GMAIL_PASSWORD"]
   }
   config.action_mailer.default_url_options = { host: "localhost:3000" }
+
+  # I'd have ideally liked to use Mailgun, Mandrill or SendGrid for production.
   
 end
