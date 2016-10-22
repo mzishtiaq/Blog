@@ -2,21 +2,20 @@ require "rails_helper"
 
 feature "User can leave comments" do
   scenario "successfully" do
+    user_name = "Zeeshan"
+    comment_body = "You just try your best mate!"
 
-    title = "First article"
-    body = "Lorem Khaled Ipsum is a major key to success.
-                          You do know, you do know that
-                          they don’t want you to have lunch. "
-
-    create_article(title,body)
-    click_link "First article"
-
-    fill_in "User name", with: "Zeeshan"
-    fill_in "Body",      with: "You just try your best mate!"
-    click_button("Submit")
+    create_comment(user_name,comment_body)
 
     expect(page).to have_css "h3", text: "Zeeshan"
     expect(page).to have_content("You just try your best mate!")
-    
+  end
+
+  context "when user name is empty" do
+    scenario "Unsuccessfully" do
+      create_comment("","")
+
+      expect(page).to have_content("Your comment couldn't be added, please make sure that user name isn't empty")
+    end
   end
 end

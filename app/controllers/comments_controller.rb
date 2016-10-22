@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
       flash[:notice] = "Thank you for commenting"
       redirect_to article_path(@article)
     else
-      flash[:alert] = "Your comment couldn't be added"
+      flash[:alert] = "Your comment couldn't be added, please make sure that user name isn't empty"
       redirect_to article_path(@article)
     end
   end

@@ -9,7 +9,7 @@ class SubscribersController < ApplicationController
       flash[:notice] = "Thank you for subscribing"
       redirect_to root_path
     else
-      flash[:alert] = "You couldn't subscribe"
+      flash[:alert] = "You couldn't subscribe, please make sure your email is correct"
       render 'new'
     end
   end
