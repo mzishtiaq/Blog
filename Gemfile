@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "friendly_id"
 gem "redcarpet"
 gem "figaro"
+gem 'bower-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
