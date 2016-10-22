@@ -1,4 +1,7 @@
 <p>
   A new article was just published <%= link_to @article.title, @article %>,
   please click the link to read the article.
-</p><br>
+</p>
+<p>
+  To unsubscribe, please click here: <%= link_to "Unsubscribe", unsubscribe_subscriber_url(@subscriber) %>
+</p>

@@ -4,5 +4,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :subscribers
+  resources :subscribers do
+    get :unsubscribe, on: :member
+  end
+  
 end
