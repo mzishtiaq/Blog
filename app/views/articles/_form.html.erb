@@ -2,7 +2,7 @@
   <% if @article.errors.any? %>
       <ul>
         <% @article.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
+          <li class="alert alert-danger"><%= msg %></li>
         <% end %>
       </ul>
   <% end %>
@@ -15,6 +15,6 @@
     <%= form.text_area :body, class:"form-control", rows: "10" %>
   </div>
   <p>
-    <%= form.submit "Submit", class: "btn btn-primary btn-sm" %>
+    <%= form.submit "Submit", class:"btn btn-outlined btn-black" %>
   </p>
 <% end %>

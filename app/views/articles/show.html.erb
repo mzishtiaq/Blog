@@ -1,12 +1,27 @@
-<h2><%= @article.title %></h2>
-<p><%= markdown(@article.body) %></p>
+<div class="row">
+  <section class="col-md-12 articles">
 
-<h2>Comments</h2>
-  <%= render partial: "comments/comments" %>
+    <div class="article-title">
+      <h2><%= @article.title %></h2>
+      <small><%= l @article.created_at.to_date,format: :long %></small>
+    </div>
 
-<h2>Leave a comment</h2>
-  <%= render partial: "comments/form" %>
+    <div class="article-body">
+      <p><%= markdown(@article.body) %></p>
+      <%= link_to 'Edit article', edit_article_path(@article), class:"btn btn-outlined btn-black" %>
+      <%= link_to 'Delete article', article_path(@article), method: :delete, class:"btn btn-outlined btn-black" %>
+    </div>
+  </section>
 
-<%= link_to 'Edit article', edit_article_path(@article) %>
-<%= link_to 'Delete article', article_path(@article), method: :delete %>
-<%= link_to 'All Articles', articles_path %>
+  <section class="col-md-12 comments">
+    <h2>Comments [<%= @article.comments.size %>]</h2>
+    <div class="comments-body">
+      <%= render partial: "comments/comments" %>
+    </div>
+  </section>
+
+  <section class="col-md-12 comment-form">
+    <h2>Leave a comment</h2>
+      <%= render partial: "comments/form" %>
+  </section>
+</div>

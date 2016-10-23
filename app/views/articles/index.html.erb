@@ -1,6 +1,10 @@
-<% @articles.each do |article| %>
-  <h2><%= link_to article.title, article_path(article) %></h2>
-<% end %>
+<ol class="list-group articles">
+  <% @articles.each do |article| %>
+    <li class="list-group-item clearfix">
+      <%= link_to article.title, article_path(article), class:"h2" %><br>
+      <%= l article.created_at.to_date,format: :long %>
+    </li>
+  <% end %>
+</ol>
 
-<%= link_to "Add a new article", new_article_path %>
-<%= link_to "Subscribe", new_subscriber_path %>
+<%= link_to "Add a new article", new_article_path, class:"btn btn-outlined btn-black" %>

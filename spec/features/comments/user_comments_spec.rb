@@ -7,7 +7,7 @@ feature "User can leave comments" do
 
     create_comment(user_name,comment_body)
 
-    expect(page).to have_css "h3", text: "Zeeshan"
+    expect(page).to have_css "h4", text: "Zeeshan"
     expect(page).to have_content("You just try your best mate!")
   end
 

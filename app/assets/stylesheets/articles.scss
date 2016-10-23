@@ -1,3 +1,60 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bg-black{
+	background: #000000;
+}
+
+.btn {
+	letter-spacing: 1px;
+	text-decoration: none;
+	background: none;
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+	font-weight:700;
+  font-size:12px;
+  line-height:16px;
+  border: 2px solid;
+  padding:8px 15px;
+}
+
+.btn-outlined.btn-black {
+    background: none;
+    color: #000000;
+	border-color: #000000;
+}
+.bg-black{
+	background: #000000;
+}
+
+.btn-outlined.btn-black:hover,
+.btn-outlined.btn-black:active {
+    color: #FFF;
+    background: #000000;
+    border-color: #000000;
+}
+
+.list-group.articles a{
+	text-decoration: none;
+}
+
+.article-title{
+	border-bottom: 1px black solid;
+}
+
+.article-body{
+	padding-bottom: 10px;
+	border-bottom: 1px black solid;
+}
+
+.comments-body{
+	border-bottom: 1px black solid;
+}

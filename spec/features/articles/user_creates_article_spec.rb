@@ -9,7 +9,7 @@ feature "User creates article" do
 
     create_article(title,body)
 
-    expect(page).to have_css 'h2', text: title
+    expect(page).to have_css 'li', text: title
   end
   context "When fields are empty" do
     scenario "Unsuccessfully" do

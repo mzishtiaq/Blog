@@ -14,3 +14,17 @@
  *= require_self
  *= require 'bootstrap-sass-official'
  */
+
+.navbar-brand.brand a{
+  font-size: 2.5em;
+  text-decoration: none;
+  color: #ffffff;
+}
+.nav.navbar-nav.navbar-right{
+  padding-top: 50px;
+}
+.btn-outlined.btn-black.subscribe {
+    background: none;
+    color: #ffffff;
+    border: none;
+}
