@@ -1,0 +1,14 @@
+name: Greetings
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: github-actions-up-and-running/pr-comment@v1.0.0
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        message: "Welcome! Thanks for opening the PR! We will review it shortly!!👍"
