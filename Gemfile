@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 
-gem 'rails', '6'
+gem 'rails', '~> 6.0.1'
 gem 'pg'
 gem 'sass-rails'
 gem 'uglifier'
@@ -17,7 +17,7 @@ gem "figaro"
 gem 'bower-rails'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-rails', '~> 4'
   gem 'byebug'
   gem 'spring'
 end
