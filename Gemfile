@@ -6,11 +6,10 @@ gem 'pg'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
-
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'sdoc', '~> 1.1.0', group: :doc
 gem "friendly_id"
 gem "redcarpet"
 gem "figaro"
